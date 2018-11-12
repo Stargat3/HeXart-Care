@@ -1,0 +1,8 @@
+Voici toutes les contraintes à prendre en compte :
+- Le format .csv : une ligne par groupe de données, séparés par un ";"
+- On utilise la structure suivante :
+struct name {
+long long time;
+int pouls;
+}
+- Nomenclature : CamelCase
