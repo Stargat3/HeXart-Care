@@ -9,7 +9,7 @@ int menu()
     int c;
     printf("----Bonjour----\n Quel mode voulez-vous?\n 1-Coeur qui bat à chaque pulsation\n 2-Allumage de 1 LED sur 2\n 3-Allumage de 1 LED sur 3\n 4-Mode chenille\n 5-LED qui clignote au choix\n 0-quitter\n");
     scanf("%d",&mode);
-    while ((c = getchar()) != '\n' && c != EOF) { }
+    while ((c = getchar()) != '\n' && c != EOF) { } //Permet d'effacer la mémoire temporaire du scanf() et d'éviter les bugs (caractère incompatible)
     if(mode>0 && mode<6){
         return mode;
     }
