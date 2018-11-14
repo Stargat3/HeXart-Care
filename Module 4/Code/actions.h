@@ -1,6 +1,1 @@
-#ifndef ACTIONS_H_INCLUDED
-#define ACTIONS_H_INCLUDED
-
-
-
-#endif // ACTIONS_H_INCLUDED
+void affichage(infos *p_infos);
