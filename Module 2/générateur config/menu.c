@@ -20,7 +20,7 @@ int menu()
 
 int choixLED(){
     int nbrLED;
-    printf("");
+    printf("Quelle LED veux tu allumer ?\n");
     scanf("%d",&nbrLED);
     return nbrLED;
 }
