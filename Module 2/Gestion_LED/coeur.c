@@ -53,7 +53,7 @@ void changerLED()
      }
    }
    else if(mode == 4){
-     static int LED_ON = 0;
+     static int LED_ON = 9;
      digitalWrite(listePIN[LED_ON], LOW);
      LED_ON++;
      if(LED_ON>=10){
@@ -65,5 +65,18 @@ void changerLED()
     digitalWrite(listePIN[nbrLED], HIGH);
     delay(DELAY);
     digitalWrite(listePIN[nbrLED], LOW);
+   }
+   else if(mode == 6){
+    static int etat = 0;
+    if(etat>=0 && etat<=9){
+      digitalWrite(listePIN[etat], HIGH);
+    }
+    else if(etat>=10 && etat<=19){
+      digitalWrite(listePIN[etat-10], LOW);
+    }
+    etat++;
+    if(etat==20){
+      etat = etat - 20;
+    }
    }
 }
