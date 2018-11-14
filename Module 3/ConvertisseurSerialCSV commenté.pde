@@ -18,7 +18,7 @@ void draw() { // Fonction draw (écriture des informations dans le fichier) inst
     if (udSerial.available() > 0) { 
       String SenVal = udSerial.readString(); // création de la chaîne de caractère SenVal prenant la valeur --> Serial.readString() reads characters from the serial buffer into a string.
       if (SenVal != null) { // condition --> Si la chaîne de caractère est non nul -->
-        output.println(SenVal);//Prints data to the serial port as human-readable ASCII text followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n').
+        output.println(SenVal);//Prints data to the serial port as human-readable ASCII(format d'encodage pour les caractère) text followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n').
       }
     }
   }
