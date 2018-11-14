@@ -14,13 +14,10 @@ void loop(){
 
   /* Génére un nombre aléatoire entre 0 et 255 et l'affiche sur le port série */
   long nombre = random(70,90);
-  Serial.println(nombre);
-
   time = millis();
-
-  Serial.println(time);
-  delay(1000);
-
-  /* Délai pour l'affichage */
+  String info = String(nombre) + ';' + time + ' ';
+  char texte[50];
+  info.toCharArray(texte, 50);
+  Serial.write(texte);
   delay(500);
 }

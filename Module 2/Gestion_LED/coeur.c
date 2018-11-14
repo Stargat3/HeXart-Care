@@ -79,4 +79,10 @@ void changerLED()
       etat = etat - 20;
     }
    }
+   else if(mode == 7){
+    static byte etatPIN[10] = {LOW, LOW, LOW, LOW, LOW, LOW, LOW, LOW, LOW, LOW};
+    int editLED = random()%10;
+    etatPIN[editLED] = !etatPIN[editLED];
+    digitalWrite(listePIN[editLED], etatPIN[editLED]);
+   }
 }

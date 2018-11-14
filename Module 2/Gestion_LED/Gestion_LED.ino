@@ -4,7 +4,8 @@ extern "C" {
 
 void setup() {
   initialisationCool();
-
+  randomSeed(analogRead(5));
+  Serial.begin(9600);
 }
 
 void loop() {
