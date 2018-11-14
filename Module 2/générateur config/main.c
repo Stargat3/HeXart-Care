@@ -5,7 +5,7 @@
 
 int main()
 {
-    int mode, nbrLED;
+    int mode, nbrLED=0;
     mode = menu();
     if (mode==5)
         nbrLED = choixLED();
