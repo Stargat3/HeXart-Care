@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1542200307 source:d:\onedrive - association cesi viacesi mail\cesi\projet\1\code 3.4\3.4\actions.c
+	<stdio.h>
+	<stdlib.h>
+	"donnees.h"
+	"actions.h"
+	"menu.h"
+
+1542191244 source:d:\onedrive - association cesi viacesi mail\cesi\projet\1\code 3.4\3.4\donnees.c
+	<stdio.h>
+	<stdlib.h>
+	"donnees.h"
+	"actions.h"
+	"menu.h"
+
+1542200557 source:d:\onedrive - association cesi viacesi mail\cesi\projet\1\code 3.4\3.4\main.c
+	<stdio.h>
+	<stdlib.h>
+	"donnees.h"
+	"actions.h"
+	"menu.h"
+
+1542200847 d:\onedrive - association cesi viacesi mail\cesi\projet\1\code 3.4\3.4\menu.h
+
+1542200364 d:\onedrive - association cesi viacesi mail\cesi\projet\1\code 3.4\3.4\donnees.h
+
+1542188687 d:\onedrive - association cesi viacesi mail\cesi\projet\1\code 3.4\3.4\actions.h
+
+1542200706 source:d:\onedrive - association cesi viacesi mail\cesi\projet\1\code 3.4\3.4\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"donnees.h"
+	"actions.h"
+	"menu.h"
+

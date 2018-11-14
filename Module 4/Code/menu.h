@@ -1,6 +1,9 @@
-#ifndef MENU_H_INCLUDED
-#define MENU_H_INCLUDED
+void menu();
 
+void affichage (infos *p_infos);
+void affichagecroitdecroit();
+void recherche ();
+void affichagemoyenne();
+void affichagenbrlignes ();
+void rechercheminmax ();
 
-
-#endif // MENU_H_INCLUDED
