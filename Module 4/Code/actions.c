@@ -5,12 +5,13 @@
 #include "actions.h"
 #include "menu.h"
 
-void affichage(struct infos *p_infos)
+void affichage(struct infos **p_infos, int *n)
 {
-    for (int i=0; i<5; i++)
+    struct infos *temp;
+    temp = *p_infos;
+    for (int i=0; i<(*n); i++)
     {
-        printf("%d\n%d\n", p_infos->pouls, p_infos->temps);
-        p_infos=p_infos+1;
+        printf("Pouls : %d Temps : %d\n", temp[i].pouls, temp[i].temps);
     }
 }
 

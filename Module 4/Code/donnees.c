@@ -5,18 +5,40 @@
 #include "actions.h"
 #include "menu.h"
 
-void initialisation (struct infos *p_infos)
+FILE* ouvrirFichier()
 {
-    FILE* fichier=NULL;
+    FILE* fichier = NULL;
     fichier = fopen("Battements.csv", "r");
+    fscanf(fichier, "%*[^\n]\n");
+    return fichier;
+}
 
+void initialisation (struct infos **p_infos, int *n, FILE* fichier)
+{
     if (fichier != NULL) // Si le fichier existe
     {
-          for(int i=0;i<5;i++)
+        /*
+        for(int i=0;i<5;i++)
+        {
+            fscanf(fichier,"%d %d",&p_infos->pouls, &p_infos->temps);
+            p_infos=p_infos+1;
+        }
+        */
+        struct infos *temp;
+        temp = *p_infos;
+        int i = 1;
+        while(i)
+        {
+            fscanf(fichier, "%d%*c%d ", &(temp[*n].pouls), &(temp[*n].temps));
+            printf("%d\n", *n);
+            printf("%d;%d\n", temp[*n].pouls, temp[*n].temps);
+            (*n)++;
+            if((temp[(*n)-1].pouls) <= 0 && (temp[(*n)-1].temps) <= 0)
             {
-                fscanf(fichier,"%d %d",&p_infos->pouls, &p_infos->temps);
-                p_infos=p_infos+1;
+                i = 0;
+                (*n)--;
             }
+        }
     }
     else
     {

@@ -6,8 +6,9 @@
 #include "menu.h"
 
 
-void menu(struct infos *p_infos)
+void menu(struct infos **p_infos, int *n)
 {
+    struct infos *list;
     int Menu=0;
     int continuer = 1;
     do
@@ -25,7 +26,7 @@ void menu(struct infos *p_infos)
         switch(Menu)
         {
         case 1 :
-            affichage(p_infos);
+            affichage(p_infos, n);
             break;
         /*case 2 :
             affichagecroitdecroit();

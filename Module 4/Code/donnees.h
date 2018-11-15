@@ -5,4 +5,5 @@ struct infos {
 
 //typedef struct infos infos;
 
-void initialisation(struct infos *p_infos);
+void initialisation (struct infos **p_infos, int* n, FILE* fichier);
+FILE* ouvrirFichier();
