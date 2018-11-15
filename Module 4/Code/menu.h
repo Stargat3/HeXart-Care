@@ -5,5 +5,3 @@ void affichagecroitdecroit();
 void recherche ();
 void affichagemoyenne();
 void affichagenbrlignes ();
-void rechercheminmax ();
-

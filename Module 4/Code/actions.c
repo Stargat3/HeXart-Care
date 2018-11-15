@@ -15,39 +15,27 @@ void affichage(struct infos **p_infos, int *n)
     }
 }
 
-void rechercheminmax(struct infos *p_infos)
+void rechercheminmax(struct infos **p_infos, int *n)
 {
     int i,max,min;
-    int origine=p_infos;
+    struct infos *temp;
+    temp = *p_infos;
+    max=0;
+    min=0;
 
-    // Calcul du pouls maximum
+    for (i=0; i<(*n); i++)
+    {
+        if(temp[i].pouls>temp[max].pouls)
+        {
+            max=i;
+        }
+        else if(temp[i].pouls<temp[min].pouls)
+        {
+            min=i;
+        }
+    }
 
-    max=p_infos->pouls;
-
-printf("\nle maximum pouls du tableau est : ");
-for (i=0; i<5; i++)
-{
-if(p_infos->pouls>max)
-{
-    max=p_infos->pouls;
-}
-p_infos=p_infos+1;
-
-}
-printf("%d avec un temps de %ld\n\n",max, p_infos->temps);
-
-  //Calcul du minimum pouls du tableau
-
-p_infos=origine;
-min=p_infos->pouls;
-
-printf("\nle minimum pouls du tableau est : ");
-for (i=0; i<5; i++)
-{
-if(p_infos->pouls<min)
-min=p_infos->pouls;
-}
-printf("%d avec un temps de %ld\n\n",min, p_infos->temps);
-
+printf("Le pouls maximum est %d bpm au temps de %ld milliseconde\n", temp[max].pouls, temp[max].temps);
+printf("Le pouls minimum est %d bpm au temps de %ld millisecondes\n", temp[min].pouls, temp[min].temps);
 }
 

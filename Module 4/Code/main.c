@@ -15,10 +15,5 @@ int main()
     int tailleDonnee = 0;
     initialisation(&list, &tailleDonnee, fichier);
     menu(&list, &tailleDonnee);
-    /*
-    struct infos infostab[5];
-    initialisation(&infostab, &tailleDonnee);
-    menu(&infostab);
-    */
     return (0);
 }

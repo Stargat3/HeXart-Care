@@ -41,7 +41,7 @@ void menu(struct infos **p_infos, int *n)
             affichagenbrlignes();
             break;*/
         case 6 :
-            rechercheminmax(p_infos);
+            rechercheminmax(p_infos, n);
             break;
         }
     printf("Continuer=1 ;Quitter=0 :\n");
