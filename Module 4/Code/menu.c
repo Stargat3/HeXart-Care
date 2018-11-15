@@ -8,9 +8,9 @@
 
 void menu(struct infos **p_infos, int *n)
 {
-    struct infos *list;
     int Menu=0;
     int continuer = 1;
+    int c;
     do
     {
         printf("Chosir dans le menu\n");
@@ -21,37 +21,71 @@ void menu(struct infos **p_infos, int *n)
         printf("5. Afficher le nombre de lignes de données actuellement en mémoire\n");
         printf("6. Rechercher et afficher les max/min de pouls (avec le temps associe)\n");
         scanf("%d",&Menu);
-        printf("\n");
+
+        while ((c = getchar()) != '\n' && c != EOF) { }
 
         switch(Menu)
         {
         case 1 :
-            affichage(p_infos, n);
+            triListeTemps(p_infos, n);
+            affichage(p_infos, n, 1);
             break;
-        /*case 2 :
-            affichagecroitdecroit();
+        case 2 :
+            affichagecroitdecroit(p_infos, n);
             break;
         case 3 :
-            recherche();
+            printf("Merci de donner un temps en seconde :");
+            int tempsVoulu;
+            scanf("%d", &tempsVoulu);
+            tempsVoulu *= 1000;
+            recherche(p_infos, n, tempsVoulu);
             break;
         case 4 :
-            affichagemoyenne();
+            affichagemoyenne(p_infos, n);
             break;
         case 5 :
-            affichagenbrlignes();
-            break;*/
+            affichagenbrlignes(n);
+            break;
         case 6 :
-            rechercheminmax(p_infos, n);
+            rechercheMinMax(p_infos, n);
             break;
         }
     printf("Continuer=1 ;Quitter=0 :\n");
     scanf("%d", &continuer);
+
+    while ((c = getchar()) != '\n' && c != EOF) { }
+
     }
     while (continuer) ;
 
     system("PAUSE");
 
-    // return 0;
-
 }
 
+void affichagecroitdecroit(struct infos **p_infos, int *n)
+{
+    int choixVar, Ordre;
+    printf("Selon quelle valeur souhaitez vous affichez le tri ?\n");
+    printf("1- Pouls\n");
+    printf("2- Temps\n");
+    scanf("%d", &choixVar);
+    printf("Voulez-vous un affichage croissant ou decroissant ?\n");
+    printf("1- Croissant\n");
+    printf("2- Decroissant\n");
+    scanf("%d", &Ordre);
+
+    if(choixVar == 1 && (Ordre == 1 || Ordre == 2))
+    {
+        triListePouls(p_infos, n);
+        affichage(p_infos, n, Ordre);
+    }
+    if(choixVar == 2 && (Ordre == 1 || Ordre == 2))
+    {
+        triListeTemps(p_infos, n);
+        affichage(p_infos, n, Ordre);
+    }
+    else
+    {
+        printf("Une des 2 valeurs entrées n'est pas bonne. Retour au menu.");
+    }
+}
