@@ -67,3 +67,23 @@
 	"actions.h"
 	"menu.h"
 
+1542292002 source:c:\users\degaule65\documents\github\hexart-care\module 4\code\actions.c
+	<stdio.h>
+	<stdlib.h>
+	"donnees.h"
+	"actions.h"
+	"menu.h"
+
+1542274793 c:\users\degaule65\documents\github\hexart-care\module 4\code\donnees.h
+
+1542292002 c:\users\degaule65\documents\github\hexart-care\module 4\code\actions.h
+
+1542292002 c:\users\degaule65\documents\github\hexart-care\module 4\code\menu.h
+
+1542292002 source:c:\users\degaule65\documents\github\hexart-care\module 4\code\main.c
+	<stdio.h>
+	<stdlib.h>
+	"donnees.h"
+	"actions.h"
+	"menu.h"
+

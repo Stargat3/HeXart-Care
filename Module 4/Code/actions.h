@@ -1,3 +1,5 @@
+//Ce sont tout les prototypes que nous allons utiliser dans le menu.c//
+
 void affichage(struct infos **p_infos, int* n, int Ordre);
 void rechercheMinMax(struct infos **p_infos,int *n);
 void affichagemoyenne(struct infos **p_infos, int* n);

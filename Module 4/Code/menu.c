@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//intégration des différentes bibliothèques que nous avons créé//
 #include "donnees.h"
 #include "actions.h"
 #include "menu.h"
@@ -13,6 +13,7 @@ void menu(struct infos **p_infos, int *n)
     int c;
     do
     {
+        //menu//
         printf("Chosir dans le menu\n");
         printf("1. Afficher les donnees dans l'ordre du fichier .csv\n");
         printf("2. Afficher les donnees en ordre croissant/décroissant (selon le temps, selon le pouls)\n");
@@ -21,12 +22,13 @@ void menu(struct infos **p_infos, int *n)
         printf("5. Afficher le nombre de lignes de données actuellement en mémoire\n");
         printf("6. Rechercher et afficher les max/min de pouls (avec le temps associe)\n");
         scanf("%d",&Menu);
-
+        //sécurité pour empêcher le programme de planter si l'utilisateur met de le scanf une lettre//
         while ((c = getchar()) != '\n' && c != EOF) { }
 
         switch(Menu)
         {
         case 1 :
+            //
             triListeTemps(p_infos, n);
             affichage(p_infos, n, 1);
             break;

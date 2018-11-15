@@ -5,20 +5,24 @@
 #include "actions.h"
 #include "menu.h"
 
+//Il pemet d'afficher le pouls en fonction du temps par rapport au information qu'il y a dans le double pointeur **p_infos//
 void affichage(struct infos **p_infos, int *n, int Ordre)
 {
+    /*on crée un pointeur simple a partir de notre double pointeurs pour faciliter sont utilisation*/ pourquoi c'est plus facilte d'utilisation?
     struct infos *temp;
     temp = *p_infos;
+
     for (int i=0; i<(*n); i++)
     {
         printf("Pouls : %d Temps : %ld\n", temp[i].pouls, temp[i].temps);
     }
 }
-
+//Il permet de faire une recherche de maximun et de minimun//
 void rechercheMinMax(struct infos **p_infos, int *n)
 {
     int i,max,min;
     struct infos *temp;
+    /*on crée un pointeur simple a partir de notre double pointeurs pour faciliter sont utilisation*/ pourquoi c'est plus facilte d'utilisation?
     temp = *p_infos;
     max=0;
     min=0;
