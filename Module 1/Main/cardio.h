@@ -1,4 +1,3 @@
 //void detecter();
-void mesure();
+void simulationPulsation(char **p1);
 //void calculer();
-void initialisation();

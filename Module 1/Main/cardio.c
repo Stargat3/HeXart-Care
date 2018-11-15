@@ -1,5 +1,3 @@
-
-
 #include "cardio.h"
 //#include <stdio.h>
 //#include <stdlib.h>
@@ -10,27 +8,25 @@
 //void detecter()
 unsigned long time;
 
-void mesure()
+void simulationPulsation(char **p1)
 {
-
-  // Génére un nombre aléatoire entre 0 et 255 et l'affiche sur le port série 
+  char *info;
+  info = *p1;
+  // Génére un nombre aléatoire entre 0 et 255
   long nombre = (random()%21)+70;
   time = millis();
   char buffer[30];
   sprintf(buffer, "%ld", nombre);
-  char info[300] = "";
+  //char info[300] = "";
+  info[0] = "";
+  //strcpy(info, "");
   strcat(info, buffer);
   strcat(info, ";");
+  buffer[0] = "";
   sprintf(buffer, "%ld", time);
   strcat(info, buffer);
-  strcat(info, " ");
-  Serial.write(info);
-  delay(500);
-}
-//void calculer()
-
-
-void initialisation()
-{
-  Serial.begin(9600);
+  strcat(info, " \0");
+  //return info;
+  //Serial.write(info);
+  //delay(500);
 }
