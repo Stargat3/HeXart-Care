@@ -1,6 +1,6 @@
 struct infos {
     int pouls;
-    int temps;
+    long temps;
 };
 
 //typedef struct infos infos;

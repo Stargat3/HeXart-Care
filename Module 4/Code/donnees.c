@@ -29,9 +29,9 @@ void initialisation (struct infos **p_infos, int *n, FILE* fichier)
         int i = 1;
         while(i)
         {
-            fscanf(fichier, "%d%*c%d ", &(temp[*n].pouls), &(temp[*n].temps));
+            fscanf(fichier, "%d%*c%ld ", &(temp[*n].pouls), &(temp[*n].temps));
             printf("%d\n", *n);
-            printf("%d;%d\n", temp[*n].pouls, temp[*n].temps);
+            printf("%d;%ld\n", temp[*n].pouls, temp[*n].temps);
             (*n)++;
             if((temp[(*n)-1].pouls) <= 0 && (temp[(*n)-1].temps) <= 0)
             {

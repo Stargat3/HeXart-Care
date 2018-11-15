@@ -5,7 +5,7 @@
 #include "actions.h"
 #include "menu.h"
 
-#define NOMBRE_MESURE_MAX 750
+#define NOMBRE_MESURE_MAX 1250
 
 int main()
 {

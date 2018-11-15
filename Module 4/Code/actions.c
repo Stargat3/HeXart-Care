@@ -11,7 +11,7 @@ void affichage(struct infos **p_infos, int *n)
     temp = *p_infos;
     for (int i=0; i<(*n); i++)
     {
-        printf("Pouls : %d Temps : %d\n", temp[i].pouls, temp[i].temps);
+        printf("Pouls : %d Temps : %ld\n", temp[i].pouls, temp[i].temps);
     }
 }
 
@@ -34,7 +34,7 @@ if(p_infos->pouls>max)
 p_infos=p_infos+1;
 
 }
-printf("%d avec un temps de %d\n\n",max, p_infos->temps);
+printf("%d avec un temps de %ld\n\n",max, p_infos->temps);
 
   //Calcul du minimum pouls du tableau
 
@@ -47,7 +47,7 @@ for (i=0; i<5; i++)
 if(p_infos->pouls<min)
 min=p_infos->pouls;
 }
-printf("%d avec un temps de %d\n\n",min, p_infos->temps);
+printf("%d avec un temps de %ld\n\n",min, p_infos->temps);
 
 }
 
