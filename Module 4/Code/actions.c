@@ -5,7 +5,7 @@
 #include "actions.h"
 #include "menu.h"
 
-void affichage(infos *p_infos)
+void affichage(struct infos *p_infos)
 {
     for (int i=0; i<5; i++)
     {
@@ -14,7 +14,7 @@ void affichage(infos *p_infos)
     }
 }
 
-void rechercheminmax(infos *p_infos)
+void rechercheminmax(struct infos *p_infos)
 {
     int i,max,min;
     int origine=p_infos;

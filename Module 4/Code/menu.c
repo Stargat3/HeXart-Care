@@ -6,7 +6,7 @@
 #include "menu.h"
 
 
-void menu(infos *p_infos)
+void menu(struct infos *p_infos)
 {
     int Menu=0;
     int continuer = 1;
@@ -50,7 +50,7 @@ void menu(infos *p_infos)
 
     system("PAUSE");
 
-    return 0;
+    // return 0;
 
 }
 

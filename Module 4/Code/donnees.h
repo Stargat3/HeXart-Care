@@ -3,6 +3,6 @@ struct infos {
     int temps;
 };
 
-typedef struct infos infos;
+//typedef struct infos infos;
 
-void initialisation(infos *p_infos);
+void initialisation(struct infos *p_infos);

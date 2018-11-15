@@ -1,1 +1,1 @@
-void affichage(infos *p_infos);
+void affichage(struct infos *p_infos);

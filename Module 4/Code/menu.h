@@ -1,6 +1,6 @@
 void menu();
 
-void affichage (infos *p_infos);
+void affichage (struct infos *p_infos);
 void affichagecroitdecroit();
 void recherche ();
 void affichagemoyenne();

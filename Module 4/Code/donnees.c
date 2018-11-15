@@ -5,10 +5,10 @@
 #include "actions.h"
 #include "menu.h"
 
-void initialisation (infos *p_infos)
+void initialisation (struct infos *p_infos)
 {
     FILE* fichier=NULL;
-    fichier = fopen("test.csv", "r");
+    fichier = fopen("Battements.csv", "r");
 
     if (fichier != NULL) // Si le fichier existe
     {
@@ -16,13 +16,12 @@ void initialisation (infos *p_infos)
             {
                 fscanf(fichier,"%d %d",&p_infos->pouls, &p_infos->temps);
                 p_infos=p_infos+1;
-
             }
     }
     else
     {
         printf("Impossible d'ouvrir le fichier test.csv\n\n");
-        return (1);
+        //return (1);
     }
     fclose(fichier);
 }

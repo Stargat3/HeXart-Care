@@ -9,7 +9,7 @@
 
 int main()
 {
-    infos infostab[5];
+    struct infos infostab[5];
     initialisation(&infostab);
     menu(&infostab);
     return (0);
