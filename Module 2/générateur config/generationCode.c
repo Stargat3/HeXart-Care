@@ -14,7 +14,7 @@ void createParam(int mode, int nbrLED){
     fprintf(param_h, "#endif");
 }
 
-//ce block permet de crée un nv fichier,param.h ,La commande "w" permet d'écrire//
+//ce block permet de crée un nv fichier, param.h. Le paramètre "w" permet d'écrire dans un fichier//
 FILE* createFile(){
     FILE* fichier;
     fichier = fopen("param.h", "w");
