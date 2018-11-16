@@ -27,8 +27,8 @@ void menu(struct infos **p_infos, int *n)
 
         switch(Menu)
         {
+            //différentes parties du menu//
         case 1 :
-            //
             triListeTemps(p_infos, n);
             affichage(p_infos, n, 1);
             break;
@@ -43,7 +43,7 @@ void menu(struct infos **p_infos, int *n)
             recherche(p_infos, n, tempsVoulu);
             break;
         case 4 :
-            affichagemoyenne(p_infos, n);
+            affichageMoyenne(p_infos, n);
             break;
         case 5 :
             affichagenbrlignes(n);
@@ -63,7 +63,7 @@ void menu(struct infos **p_infos, int *n)
     system("PAUSE");
 
 }
-
+//exécution du prototype affichagecroitdecroit//
 void affichagecroitdecroit(struct infos **p_infos, int *n)
 {
     int choixVar, Ordre;

@@ -8,7 +8,7 @@
 //Il pemet d'afficher le pouls en fonction du temps par rapport au information qu'il y a dans le double pointeur **p_infos//
 void affichage(struct infos **p_infos, int *n, int Ordre)
 {
-    /*on crée un pointeur simple a partir de notre double pointeurs pour faciliter sont utilisation*/ pourquoi c'est plus facilte d'utilisation?
+    /*on crée un pointeur simple a partir de notre double pointeurs pour faciliter sont utilisation, le simple pointeur on peut y accèder comme un tableau*/
     struct infos *temp;
     temp = *p_infos;
 
@@ -22,7 +22,6 @@ void rechercheMinMax(struct infos **p_infos, int *n)
 {
     int i,max,min;
     struct infos *temp;
-    /*on crée un pointeur simple a partir de notre double pointeurs pour faciliter sont utilisation*/ pourquoi c'est plus facilte d'utilisation?
     temp = *p_infos;
     max=0;
     min=0;
@@ -43,7 +42,7 @@ printf("Le pouls maximum est %d bpm au temps de %ld milliseconde\n", temp[max].p
 printf("Le pouls minimum est %d bpm au temps de %ld millisecondes\n", temp[min].pouls, temp[min].temps);
 }
 
-void affichagemoyenne(struct infos **p_infos, int* n)
+void affichageMoyenne(struct infos **p_infos, int* n)
 {
     float resultat = 0.0;
     struct infos *temp;

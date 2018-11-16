@@ -17,13 +17,6 @@ void initialisation (struct infos **p_infos, int *n, FILE* fichier)
 {
     if (fichier != NULL) // Si le fichier existe
     {
-        /*
-        for(int i=0;i<5;i++)
-        {
-            fscanf(fichier,"%d %d",&p_infos->pouls, &p_infos->temps);
-            p_infos=p_infos+1;
-        }
-        */
         struct infos *temp;
         temp = *p_infos;
         int i = 1;
@@ -43,7 +36,6 @@ void initialisation (struct infos **p_infos, int *n, FILE* fichier)
     else
     {
         printf("Impossible d'ouvrir le fichier test.csv\n\n");
-        //return (1);
     }
     fclose(fichier);
 }
