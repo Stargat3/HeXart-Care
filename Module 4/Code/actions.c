@@ -46,7 +46,7 @@ printf("Le pouls minimum est %d bpm au temps de %ld millisecondes\n", temp[min].
 void affichageMoyenne(struct infos **p_infos, int* n)
 {
     float resultat = 0.0;
-     /*on crée un pointeur simple a partir de notre double pointeurs pour faciliter sont utilisation, le simple pointeur on peut y accèder comme un tableau*/
+     /*on crée un pointeur simple a partir de notre double pointeurs pour faciliter son utilisation,on peut y accèder comme un tableau*/
     struct infos *temp;
     temp = *p_infos;
 
@@ -62,11 +62,11 @@ void affichagenbrlignes(int* n)
 {
     printf("Il y a %d valeurs de pouls en mémoire.\n", *n);
 }
-//tri du pouls//
+//tri de la liste en fonction du pouls//
 void triListePouls(struct infos **p_infos, int* n)
 {
     struct infos *temp;
-     /*on crée un pointeur simple a partir de notre double pointeurs pour faciliter sont utilisation, le simple pointeur on peut y accèder comme un tableau*/
+     /*on crée un pointeur simple a partir de notre double pointeurs pour faciliter sont utilisation,on peut y accèder comme un tableau*/
     temp = *p_infos;
     int permut = 1;
     int passage = 0;
@@ -91,7 +91,7 @@ void triListePouls(struct infos **p_infos, int* n)
         }
     }
 }
-//tri du temps//
+//tri de la liste en fonction du temps//
 void triListeTemps(struct infos **p_infos, int* n)
 {
     struct infos *temp;
@@ -119,7 +119,7 @@ void triListeTemps(struct infos **p_infos, int* n)
         }
     }
 }
-//recherche du temps par rapport au pouls//
+//recherche d'une valeur de pouls a partir d'un temps//
 void recherche(struct infos **p_infos,int *n, int value)
 {
     triListeTemps(p_infos, n);

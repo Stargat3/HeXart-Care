@@ -6,10 +6,9 @@
 #include "menu.h"
 
 #define NOMBRE_MESURE_MAX 2000
-
+//on crée la structure, on ouvre le fichier et lancons le menu//
 int main()
 {
-
     struct infos *list;
     list = (struct infos*)malloc(sizeof(struct infos) * (NOMBRE_MESURE_MAX));
     FILE* fichier = ouvrirFichier();

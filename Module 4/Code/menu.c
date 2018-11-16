@@ -63,7 +63,7 @@ void menu(struct infos **p_infos, int *n)
     system("PAUSE");
 
 }
-//exécution du prototype affichagecroitdecroit//
+//Cette fonction permet de demander a l'utilisateur comment il souhaite afficher sa liste//
 void affichagecroitdecroit(struct infos **p_infos, int *n)
 {
     int choixVar, Ordre;
@@ -78,6 +78,7 @@ void affichagecroitdecroit(struct infos **p_infos, int *n)
 
     if(choixVar == 1 && (Ordre == 1 || Ordre == 2))
     {
+        //on tri la liste avant de l'afficher//
         triListePouls(p_infos, n);
         affichage(p_infos, n, Ordre);
     }
