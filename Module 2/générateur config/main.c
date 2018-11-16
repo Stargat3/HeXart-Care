@@ -5,14 +5,20 @@
 
 int main()
 {
-    int mode, nbrLED=0;
+    int mode = -1, nbrLED=0;
     //mode fais appel au prototype menu()//
-    mode = menu();
-    //si le mode 5 a était choisi alors on demande a l'utilisateur de définir le nbr de LED.//
-    if (mode==5)
-    //fais appel au prototype choixLED()//
-        nbrLED = choixLED();
-    //création du param.h avec le mode ainsi que le nbr de LED//
+	while(!(mode>0 && mode<6))
+	{
+		mode = menu();
+		//si le mode 5 a était choisi alors on demande a l'utilisateur de définir le nbr de LED.//
+		if (mode==5)
+		//demande à l'utilisateur de choisir une LED//
+			while(!(nbrLED>=0 && nbrLED<=10))
+			{
+				nbrLED = choixLED();
+			}
+	}
+	//création du param.h avec le mode ainsi que le nombre de LED//
     createParam(mode, nbrLED);
     return 0;
 }

@@ -70,8 +70,7 @@ void triListePouls(struct infos **p_infos, int* n)
     temp = *p_infos;
     int permut = 1;
     int passage = 0;
-    int tempPouls;
-    long tempTemps;
+    struct infos tempStruct;
     while(permut)
     {
         permut = 0;
@@ -81,12 +80,9 @@ void triListePouls(struct infos **p_infos, int* n)
             if(temp[i].pouls > temp[i+1].pouls)
             {
                 permut = 1;
-                tempPouls = temp[i].pouls;
-                tempTemps = temp[i].temps;
-                temp[i].pouls = temp[i+1].pouls;
-                temp[i].temps = temp[i+1].temps;
-                temp[i+1].pouls = tempPouls;
-                temp[i+1].temps = tempTemps;
+                tempStruct = temp[i];
+                temp[i] = temp[i+1];
+                temp[i+1] = tempStruct;
             }
         }
     }
@@ -98,8 +94,7 @@ void triListeTemps(struct infos **p_infos, int* n)
     temp = *p_infos;
     int permut = 1;
     int passage = 0;
-    int tempPouls;
-    long tempTemps;
+    struct infos tempStruct;
     while(permut)
     {
         permut = 0;
@@ -109,12 +104,9 @@ void triListeTemps(struct infos **p_infos, int* n)
             if(temp[i].temps > temp[i+1].temps)
             {
                 permut = 1;
-                tempPouls = temp[i].pouls;
-                tempTemps = temp[i].temps;
-                temp[i].pouls = temp[i+1].pouls;
-                temp[i].temps = temp[i+1].temps;
-                temp[i+1].pouls = tempPouls;
-                temp[i+1].temps = tempTemps;
+                tempStruct = temp[i];
+                temp[i] = temp[i+1];
+                temp[i+1] = tempStruct;
             }
         }
     }

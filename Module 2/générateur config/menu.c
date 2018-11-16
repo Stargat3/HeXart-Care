@@ -22,5 +22,6 @@ int choixLED(){
     int nbrLED;
     printf("Quelle LED veux tu allumer ?\n");
     scanf("%d",&nbrLED);
+	while ((c = getchar()) != '\n' && c != EOF) { }
     return nbrLED;
 }
