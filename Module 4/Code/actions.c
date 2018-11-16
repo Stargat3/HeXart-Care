@@ -42,9 +42,11 @@ printf("Le pouls maximum est %d bpm au temps de %ld milliseconde\n", temp[max].p
 printf("Le pouls minimum est %d bpm au temps de %ld millisecondes\n", temp[min].pouls, temp[min].temps);
 }
 
+//Il permet d'afficher la moyenne//
 void affichageMoyenne(struct infos **p_infos, int* n)
 {
     float resultat = 0.0;
+     /*on crée un pointeur simple a partir de notre double pointeurs pour faciliter sont utilisation, le simple pointeur on peut y accèder comme un tableau*/
     struct infos *temp;
     temp = *p_infos;
 
@@ -60,10 +62,11 @@ void affichagenbrlignes(int* n)
 {
     printf("Il y a %d valeurs de pouls en mémoire.\n", *n);
 }
-
+//tri du pouls//
 void triListePouls(struct infos **p_infos, int* n)
 {
     struct infos *temp;
+     /*on crée un pointeur simple a partir de notre double pointeurs pour faciliter sont utilisation, le simple pointeur on peut y accèder comme un tableau*/
     temp = *p_infos;
     int permut = 1;
     int passage = 0;
@@ -88,7 +91,7 @@ void triListePouls(struct infos **p_infos, int* n)
         }
     }
 }
-
+//tri du temps//
 void triListeTemps(struct infos **p_infos, int* n)
 {
     struct infos *temp;
@@ -116,7 +119,7 @@ void triListeTemps(struct infos **p_infos, int* n)
         }
     }
 }
-
+//recherche du temps par rapport au pouls//
 void recherche(struct infos **p_infos,int *n, int value)
 {
     triListeTemps(p_infos, n);

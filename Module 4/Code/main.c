@@ -9,7 +9,7 @@
 
 int main()
 {
-    //exécution
+
     struct infos *list;
     list = (struct infos*)malloc(sizeof(struct infos) * (NOMBRE_MESURE_MAX));
     FILE* fichier = ouvrirFichier();

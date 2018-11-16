@@ -15,7 +15,7 @@ FILE* ouvrirFichier()
 
 void initialisation (struct infos **p_infos, int *n, FILE* fichier)
 {
-    if (fichier != NULL) // Si le fichier existe
+    if (fichier != NULL) // Si le fichier existe alors éxecute le programme(on écrit dans le fichier)//
     {
         struct infos *temp;
         temp = *p_infos;
@@ -33,9 +33,11 @@ void initialisation (struct infos **p_infos, int *n, FILE* fichier)
             }
         }
     }
+    //si le fichiers n'éxiste pas alors on affiche://
     else
     {
         printf("Impossible d'ouvrir le fichier test.csv\n\n");
     }
+    //on referme le fichier//
     fclose(fichier);
 }
